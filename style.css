@@ -1,0 +1,429 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0b0b;
+    color:white;
+}
+
+/* ===== COLORES ===== */
+:root{
+    --dorado:#f5c542;
+    --gris:#1a1a1a;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#000;
+    padding:12px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2px solid var(--dorado);
+}
+
+.logo{
+    height:55px;
+}
+
+#inicioBtn{
+    background:transparent;
+    color:var(--dorado);
+    border:2px solid var(--dorado);
+    padding:8px 18px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.nav-btn{
+    background:var(--dorado);
+    color:black;
+    padding:10px 18px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* ===== SECCIONES ===== */
+.container{
+    padding:90px 10%;
+}
+
+h2{
+    color:var(--dorado);
+    font-size:38px;
+    margin-bottom:30px;
+    border-left:6px solid var(--dorado);
+    padding-left:15px;
+}
+
+/* ===== HERO (IMAGEN COMPLETA) ====/* ===== HERO PANTALLA COMPLETA ===== */
+
+#hero{
+    position:relative;
+    height:100vh;
+    background-image: url("img/empresa/localfrentuvich.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+/* capa oscura arriba de la imagen */
+#hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+/* contenido arriba */
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:80%;
+}
+
+.hero-content h1{
+    color:var(--dorado);
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.hero-buttons a{
+    border:2px solid var(--dorado);
+    color:var(--dorado);
+    padding:14px 28px;
+    text-decoration:none;
+    margin:10px;
+    transition:0.3s;
+}
+
+.hero-buttons a:hover{
+    background:var(--dorado);
+    color:black;
+}
+
+
+/* ===== SERVICIOS ===== */
+#servicios ul{
+    margin-top:15px;
+    padding-left:20px;
+}
+
+/* ===== GALERIA TRABAJOS ===== */
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:15px;
+}
+
+.galeria img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border:3px solid var(--dorado);
+    transition:0.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+/* ===== EMPRESA ===== */
+.empresa-galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.empresa-galeria img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border:3px solid var(--dorado);
+}
+
+/* ===== FORM ===== */
+form{
+    max-width:500px;
+}
+
+form input, form select{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    background:#222;
+    color:white;
+    border:none;
+}
+
+form button{
+    width:100%;
+    padding:14px;
+    background:var(--dorado);
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ===== CONTACTO ===== */
+#contacto{
+    background:var(--gris);
+}
+/* ===== NAVBAR PRO ===== */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#000;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2px solid var(--dorado);
+}
+
+.nav-logo img{
+    height:60px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:var(--dorado);
+}
+
+.nav-highlight{
+    border:2px solid var(--dorado);
+    padding:8px 16px;
+    color:var(--dorado) !important;
+}
+/* ===== GALERIA CON VER MAS ===== */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:15px;
+    max-height:260px;   /* muestra solo una fila */
+    overflow:hidden;
+    transition:0.5s;
+}
+
+.galeria.expandida{
+    max-height:5000px;  /* muestra todo */
+}
+
+.ver-mas-container{
+    text-align:center;
+    margin-top:20px;
+}
+
+#verMasBtn{
+    background:transparent;
+    border:2px solid var(--dorado);
+    color:var(--dorado);
+    padding:10px 25px;
+    cursor:pointer;
+    font-size:16px;
+}
+/* ===== GALERIA COLAPSADA ===== */
+
+#galeriaTrabajos{
+    max-height:260px;     /* muestra solo 1 fila */
+    overflow:hidden;
+    transition:max-height 0.6s ease;
+}
+
+#galeriaTrabajos.expandida{
+    max-height:5000px;    /* muestra todo */
+}
+#galeriaTrabajos{
+    max-height:260px;
+    overflow:hidden;
+    transition:max-height 0.6s ease;
+}
+
+#galeriaTrabajos.expandida{
+    max-height:5000px;
+}
+/* ===== SOMBRAS Y PROFUNDIDAD ===== */
+
+section{
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    margin-bottom: 40px;
+    border-radius: 6px;
+}
+
+/* imágenes más pro */
+.galeria img,
+.empresa-galeria img{
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.galeria img:hover,
+.empresa-galeria img:hover{
+    transform: scale(1.04);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* botones más finos */
+.hero-buttons a,
+.nav-highlight,
+form button,
+#verMasBtn{
+    transition: all .3s ease;
+}
+
+.hero-buttons a:hover,
+.nav-highlight:hover,
+form button:hover,
+#verMasBtn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+/* ===== ANIMACIÓN SCROLL ===== */
+
+.oculto{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease;
+}
+
+.mostrar{
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ===== BOTON CATALOGO PRO ===== */
+
+.btn-catalogo{
+    display:inline-block;
+    margin-top:25px;
+    padding:16px 30px;
+    background:var(--dorado);
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    border-radius:4px;
+    transition:all .3s ease;
+}
+
+.btn-catalogo:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+/* ===== WHATSAPP FLOTANTE ===== */
+
+.wpp-float{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.5);
+    z-index:1000;
+    transition:0.3s;
+}
+
+.wpp-float img{
+    width:35px;
+}
+
+.wpp-float:hover{
+    transform:scale(1.1);
+}
+/* ================== MOBILE ================== */
+@media (max-width: 768px){
+
+    .container{
+        padding:60px 20px;
+    }
+
+    /* NAVBAR */
+    .nav-links{
+        flex-wrap: wrap;
+        gap:12px;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .nav-logo img{
+        height:45px;
+    }
+
+    /* HERO */
+    .hero-content h1{
+        font-size:34px;
+        line-height:1.2;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+        align-items:center;
+    }
+
+    .hero-buttons a{
+        width:90%;
+        text-align:center;
+    }
+
+    /* GALERIAS */
+    .galeria{
+        grid-template-columns: 1fr;
+    }
+
+    .empresa-galeria{
+        grid-template-columns: 1fr;
+    }
+
+    /* TITULOS */
+    h2{
+        font-size:28px;
+    }
+
+}
+
