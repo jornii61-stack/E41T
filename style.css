@@ -426,4 +426,142 @@ form button:hover,
     }
 
 }
+/* ===== SISTEMAS ===== */
+
+.sistema{
+    background: #111;
+    padding: 25px;
+    margin-top: 25px;
+    border-left: 5px solid var(--dorado);
+    border-radius: 6px;
+}
+
+.sistema h3{
+    color: var(--dorado);
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.sistema ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+/* ===== BLOQUES DE TEXTO IMPORTANTES (historia, politicas, valores) ===== */
+
+#empresa p,
+#politicas p,
+#politicas ul,
+#politicas li{
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+#politicas h3{
+    margin-top:30px;
+    color: var(--dorado);
+    border-bottom:1px solid var(--dorado);
+    padding-bottom:6px;
+}
+
+/* ===== VALORES / MISION / VISION ===== */
+
+section ul li{
+    margin-bottom:10px;
+}
+
+/* ===== MEJOR LECTURA GENERAL ===== */
+
+p{
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ===== FONDOS ALTERNADOS (efecto profesional) ===== */
+
+section:nth-child(even){
+    background: #0f0f0f;
+}
+
+section:nth-child(odd){
+    background: #141414;
+}
+
+/* ===== TITULOS MÁS PRO ===== */
+
+h3{
+    font-size:22px;
+    margin-top:20px;
+    margin-bottom:10px;
+    color:white;
+}
+
+/* ===== SECCIÓN SISTEMAS MÁS VISUAL ===== */
+
+#sistemas{
+    background: #0f0f0f;
+}
+
+/* ===== POLITICAS MÁS SERIAS ===== */
+
+#politicas{
+    background:#0d0d0d;
+    border-top:2px solid var(--dorado);
+    border-bottom:2px solid var(--dorado);
+}
+
+/* ===== EMPRESA / HISTORIA DESTACADA ===== */
+
+#empresa{
+    background:#101010;
+}
+
+/* ===== HOVER TARJETAS ===== */
+
+.sistema:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transition:0.3s;
+}
+/* ===== VALORES / MISION / VISION PRO ===== */
+
+.valores-section{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+.valores-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:80px;
+    align-items:start;
+}
+
+.valores-col ul{
+    margin-top:20px;
+    padding-left:20px;
+    font-size:18px;
+    line-height:2;
+}
+
+.valores-col h3{
+    color:var(--dorado);
+    font-size:26px;
+    margin-top:20px;
+}
+
+.valores-col p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .valores-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+}
 
