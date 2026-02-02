@@ -31,7 +31,7 @@
 <header id="hero">
     <div class="hero-content">
         <h1>70 años protegiendo los techos de Mendoza</h1>
-        <p>Impermeabilización profesional · Garantía escrita · Personal con ART · Sistema exclusivo LUC-2 MGT</p>
+        <p>Impermeabilización profesional · Trabajos con garantía · Personal con ART · Exclusivo Sistema LUC-2 MGT</p>
         <div class="hero-buttons">
             <a href="#visita">Solicitar visita técnica</a>
             <a href="#trabajos">Ver trabajos realizados</a>
@@ -45,7 +45,7 @@
     <h2>Servicios</h2>
     <p>
         Realizamos impermeabilizaciones definitivas utilizando materiales de primera calidad
-        y nuestro sistema exclusivo LUC-2 MGT.
+        y nuestro exclusivo sistema LUC-2 MGT.
     </p>
     <ul>
         <li>Techos planos</li>
@@ -61,7 +61,7 @@
     </p>
 
     <div class="sistema">
-        <h3>Sistema LUC 41</h3>
+        <h3>Sistema LUC-2 MGT</h3>
         <p><strong>Aplicación:</strong> Techos de chapa, tejas y superficies donde la membrana común no se adapta.</p>
         <p>
             Membrana armada "in situ", impermeabilidad total, procedimiento en frío,
@@ -74,7 +74,7 @@
     </div>
 
     <div class="sistema">
-        <h3>Sistema FRAGUS POWER — Azoteas transitables</h3>
+        <h3>Sistema FRAGUS POWER — Terrazas y techos transitables de alto transito</h3>
         <p><strong>Aplicación:</strong> Todo tipo de techos</p>
         <p>
             Soporta abrasión, golpes, punzado, granizo, alto tránsito peatonal y rayos UV.
@@ -194,7 +194,7 @@
     <form id="formVisita">
         <input type="text" id="nombre" placeholder="Nombre y apellido" required>
         <input type="text" id="telefono" placeholder="Teléfono" required>
-        <input type="text" id="departamento" placeholder="Departamento" required>
+        <input type="text" id="localidad" placeholder="Localidad" required>
         <input type="text" id="direccion" placeholder="Calle y numeración" required>
         <select id="altura">
             <option>Planta baja</option>
@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const nombre = document.getElementById("nombre").value;
         const telefono = document.getElementById("telefono").value;
-        const departamento = document.getElementById("departamento").value;
+        const localidad = document.getElementById("localidad").value;
         const direccion = document.getElementById("direccion").value;
         const altura = document.getElementById("altura").value;
 
@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 Nombre: ${nombre}
 Teléfono: ${telefono}
-Departamento: ${departamento}
+Localidad: ${localidad}
 Dirección: ${direccion}
 Altura del techo: ${altura}`;
 
